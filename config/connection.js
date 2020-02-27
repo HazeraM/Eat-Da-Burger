@@ -3,12 +3,14 @@ var mysql = require("mysql");
 // to protect the key from github
 require("dotenv").config();
 
+var mysql = require("mysql");
+
 var connection = mysql.createConnection({
-    host: "localhost",
-    port: 3306,
-    user: "root",
-    password: "abcd1234",
-    database: "burgers_db"
+  host: "localhost",
+  port: 3306,
+  user: "root",
+  password: process.env.KEY,
+  database: "burgers_db"
 });
 
 // Make connection.
